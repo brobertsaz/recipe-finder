@@ -1,5 +1,4 @@
 class RecipesController < ApplicationController
-  require 'RecipePuppy'
 
   def index
     if params['query'].present?
