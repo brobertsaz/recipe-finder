@@ -27,7 +27,7 @@
           <tr>
             <td><%= link_to recipe['title'], recipe['href'] %></td>
             <td><%= recipe['ingredients'] %></td>
-            <td><%= recipe['thumbnail'] %></td>
+            <td><%= image_tag(recipe['thumbnail']) %></td>
           </tr>
           <% end %>
         </tbody>
