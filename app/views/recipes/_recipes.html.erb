@@ -1,0 +1,23 @@
+<div class="row padded-top">
+    <div class="col-lg-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Ingedients</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @recipes.each do |recipe| %>
+          <tr>
+            <td><%= link_to recipe['title'], recipe['href'], target: '_blank' %></td>
+            <td><%= recipe['ingredients'] %></td>
+            <td><%= image_tag(recipe['thumbnail']) %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= will_paginate @recipes %>
