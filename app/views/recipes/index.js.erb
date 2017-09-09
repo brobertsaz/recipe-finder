@@ -1,1 +1,5 @@
-$("#recipes").html("<%= escape_javascript(render partial: 'recipes' ) %>");
+<% if @recipes.present? %>
+  $("#recipes").html("<%= escape_javascript(render partial: 'recipes' ) %>");
+<% else %>
+  $("#recipes").html("<br><h4>No results found</h4>");
+<% end %>
