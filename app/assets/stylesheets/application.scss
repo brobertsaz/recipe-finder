@@ -8,3 +8,9 @@
   background: white;
   border: 1px solid #ccc;
 }
+
+.pagination {
+  a, .current {
+    padding-left: 7px;
+  }
+}
