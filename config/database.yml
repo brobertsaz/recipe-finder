@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: recipe_finder_development
+
+test:
+  <<: *default
+  database: recipe_finder_test
+
+production:
+  <<: *default
+  database: recipe_finder_production
+  username: recipe_finder
+  password: <%= ENV['RECIPE_FINDER_DATABASE_PASSWORD'] %>
